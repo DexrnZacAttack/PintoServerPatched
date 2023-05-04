@@ -117,7 +117,8 @@ public class PintoServer implements Runnable {
 			}
 			// Create the console handler that will handle console commands
 			this.consoleHandler = new ConsoleHandler(this, new ConsoleCaller(null));
-			
+			logger.info("PintoServerPatched by DexrnZacAttack");
+			logger.info("github.com/DexrnZacAttack/PintoServerPatched");
 			logger.info("Initialized! Listening on " + MainConfig.instance.listenIP + 
 					":" + MainConfig.instance.listenPort + "...");
 		} catch (Throwable throwable) {

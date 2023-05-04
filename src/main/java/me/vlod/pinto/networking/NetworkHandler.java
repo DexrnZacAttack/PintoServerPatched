@@ -144,7 +144,7 @@ public class NetworkHandler {
 
 	public void handleLoginPacket(PacketLogin packet) {
 		if (!NetHandlerUtils.performModerationChecks(this, packet.name) || 
-			!NetHandlerUtils.performProtocolCheck(this, packet.protocolVersion, packet.clientVersion) ||
+			//!NetHandlerUtils.performProtocolCheck(this, packet.protocolVersion, packet.clientVersion) ||
 			!NetHandlerUtils.performNameVerification(this, packet.name)) {
 			return;
 		}
@@ -196,7 +196,7 @@ public class NetworkHandler {
 
 	public void handleRegisterPacket(PacketRegister packet) {
 		if (!NetHandlerUtils.performModerationChecks(this, packet.name) || 
-			!NetHandlerUtils.performProtocolCheck(this, packet.protocolVersion, packet.clientVersion) ||
+		//	!NetHandlerUtils.performProtocolCheck(this, packet.protocolVersion, packet.clientVersion) ||
 			!NetHandlerUtils.performNameVerification(this, packet.name)) {
 			return;
 		}

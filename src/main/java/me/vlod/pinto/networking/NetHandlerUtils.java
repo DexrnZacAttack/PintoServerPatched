@@ -1,6 +1,5 @@
 package me.vlod.pinto.networking;
 
-import me.vlod.pinto.ClientUpdateCheck;
 import me.vlod.pinto.UserStatus;
 import me.vlod.pinto.configuration.BannedConfig;
 import me.vlod.pinto.configuration.MainConfig;
@@ -42,7 +41,7 @@ public class NetHandlerUtils {
     	return true;
 	}
 	
-	public static boolean performProtocolCheck(NetworkHandler handler, byte protocol, String clientVersion) {
+	/* public static boolean performProtocolCheck(NetworkHandler handler, byte protocol, String clientVersion) {
 		// Check if the client protocol is not PROTOCOL_VERSION
     	if (protocol != NetworkHandler.PROTOCOL_VERSION) {
     		handler.kick(String.format("Illegal protocol version!\nMust be %d, but got %d!\n"
@@ -50,16 +49,17 @@ public class NetHandlerUtils {
     				NetworkHandler.PROTOCOL_VERSION, protocol));
     		return false;
     	}
-    	
+    */	
     	// Check if the client version is not supported
-    	if (!ClientUpdateCheck.isSupported(clientVersion)) {
+    /*	if (!ClientUpdateCheck.isSupported(clientVersion)) {
     		handler.kick(String.format("Your client version is unsupported!\n"
     				+ "Please update to the latest version!"));
     		return false;
     	}
     	
-    	return true;
-	}
+    	return true
+    }
+    */
 	
 	public static UserStatus getToOthersStatus(UserStatus status) {
 		return status == UserStatus.INVISIBLE ? UserStatus.OFFLINE : status;
